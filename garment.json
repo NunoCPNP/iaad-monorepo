@@ -12,6 +12,20 @@
           }
         }
       }
+    },
+    "api": {
+      "path": "apis/sample",
+      "tasks": {
+        "dev": {
+          "runner": "bin",
+          "options": {
+            "bin": "yarn",
+            "args": "run dev",
+            "stream": true,
+            "longRunning": true
+          }
+        }
+      }
     }
   },
   "schematics": []
