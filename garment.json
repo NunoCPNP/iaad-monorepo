@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/@garment/workspace/schemas/config.schema.json",
+  "presets": {},
+  "projects": {
+    "app": {
+      "path": "apps/sample",
+      "tasks": {
+        "dev": {
+          "runner": "next",
+          "options": {
+            "appPath": "{{projectDir}}"
+          }
+        }
+      }
+    }
+  },
+  "schematics": []
+}
