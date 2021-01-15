@@ -8,8 +8,8 @@ describe('<HeaderSlot /> spec', () => {
   it('Should run without errors', () => {
     const { queryAllByTestId } = render(<HeaderSlot />)
 
-    const header = queryAllByTestId(/headerslot/i)
-    expect(header).toHaveLength(1)
+    const headerslot = queryAllByTestId(/headerslot/i)
+    expect(headerslot).toHaveLength(1)
   })
 
   it('Should match snapshot', () => {

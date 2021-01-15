@@ -7,12 +7,16 @@ import { light } from '../styles/themes/light'
 
 import SEO from '../components/seo'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import HeaderSlot from '../components/HeaderSlot'
 
-import { initializeApollo } from '../../lib/apolloClient'
-import { GET_NAVBAR_ITEMS } from '../../graphql/queries'
+import { data } from '../../data'
 
-const App = () => {
+type Props = {
+  navbar: any
+}
+
+const App: React.FC<Props> = ({ navbar }) => {
   const { darkMode } = useAppState()
 
   return (
@@ -20,29 +24,25 @@ const App = () => {
       <SEO title="" description="" />
       <ThemeProvider theme={darkMode ? dark : light}>
         <HeaderSlot />
-        <Header />
+        <Header navbar={navbar} />
         <Main>
           <section id="Home">
             <h1>Hello World !</h1>
           </section>
         </Main>
+        <Footer />
       </ThemeProvider>
     </>
   )
 }
 
 export async function getStaticProps() {
-  const apolloClient = initializeApollo()
-
-  await apolloClient.query({
-    query: GET_NAVBAR_ITEMS,
-  })
+  const dataResponse = data()
 
   return {
     props: {
-      initialApolloState: apolloClient.cache.extract(),
+      navbar: dataResponse.navbar,
     },
-    revalidate: 1,
   }
 }
 

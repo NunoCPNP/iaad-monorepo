@@ -191,17 +191,7 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
       >
         <ul
           style="opacity: 1; transform: scale(0) translateZ(0);"
-        >
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
-          >
-            <a
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-        </ul>
+        />
       </div>
       <div
         class=" emotion-4"

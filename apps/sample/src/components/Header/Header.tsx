@@ -2,9 +2,13 @@ import { Container } from './Header.styles'
 
 import NavBar from '../NavBar/NavBar'
 
-const Header: React.FC = () => (
+type Props = {
+  navbar: any
+}
+
+const Header: React.FC<Props> = ({ navbar }) => (
   <Container data-testid="header">
-    <NavBar />
+    <NavBar navbar={navbar} />
   </Container>
 )
 

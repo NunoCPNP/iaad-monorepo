@@ -5,23 +5,16 @@ import NavBar from '../NavBar'
 afterEach(cleanup)
 
 describe('<NavBar /> spec', () => {
-  it('Should run without errors', async () => {
-    const { findByText, getByText } = render(<NavBar />)
+  it('Should run without errors', () => {
+    const { queryAllByTestId } = render(<NavBar />)
 
-    expect(getByText('Loading')).toBeInTheDocument()
-
-    const link = await findByText('Home')
-    expect(link).toBeInTheDocument()
+    const navbar = queryAllByTestId(/navbar/i)
+    expect(navbar).toHaveLength(1)
   })
 
-  it('Should match snapshot', async () => {
-    const { asFragment, getByText } = render(<NavBar />)
+  it('Should match snapshot', () => {
+    const { asFragment } = render(<NavBar />)
 
-    expect(getByText('Loading')).toBeInTheDocument()
-
-    await new Promise((resolve) => setTimeout(resolve, 0))
-
-    const link = await asFragment(<NavBar />)
-    await expect(link).toMatchSnapshot()
+    expect(asFragment(<NavBar />)).toMatchSnapshot()
   })
 })

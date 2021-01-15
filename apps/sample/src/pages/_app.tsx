@@ -1,10 +1,10 @@
 import Router from 'next/router'
 import nprogress from 'nprogress'
 import debounce from 'lodash.debounce'
+
 import GlobalStyles from '../styles/GlobalStyles'
-import { ApolloProvider } from '@apollo/client'
+
 import { AppContextProvider } from '../context/appContext/index'
-import { useApollo } from '../../lib/apolloClient'
 
 const start = debounce(nprogress.start, 500)
 
@@ -22,14 +22,10 @@ Router.events.on('routeChangeError', () => {
 })
 
 export default function App({ Component, pageProps }) {
-  const apolloClient = useApollo(pageProps.initialApolloState)
-
   return (
-    <ApolloProvider client={apolloClient}>
-      <AppContextProvider>
-        <Component {...pageProps} />
-        <GlobalStyles />
-      </AppContextProvider>
-    </ApolloProvider>
+    <AppContextProvider>
+      <Component {...pageProps} />
+      <GlobalStyles />
+    </AppContextProvider>
   )
 }

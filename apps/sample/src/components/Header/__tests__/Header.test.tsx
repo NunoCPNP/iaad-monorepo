@@ -12,21 +12,9 @@ describe('<Header /> spec', () => {
     expect(header).toHaveLength(1)
   })
 
-  it('Should render children navbar component', async () => {
-    const { queryAllByTestId } = render(<Header />)
-
-    await new Promise((resolve) => setTimeout(resolve, 0))
-
-    const navbar = queryAllByTestId(/navbar/i)
-    await expect(navbar).toHaveLength(1)
-  })
-
-  it('Should match snapshot', async () => {
+  it('Should match snapshot', () => {
     const { asFragment } = render(<Header />)
 
-    await new Promise((resolve) => setTimeout(resolve, 0))
-
-    const link = await asFragment(<Header />)
-    await expect(link).toMatchSnapshot()
+    expect(asFragment(<Header />)).toMatchSnapshot()
   })
 })

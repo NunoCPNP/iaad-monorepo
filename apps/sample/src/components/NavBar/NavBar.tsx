@@ -1,8 +1,5 @@
 import Link from 'next/link'
-import { useQuery } from '@apollo/client'
 import { motion } from 'framer-motion'
-
-import { GET_NAVBAR_ITEMS } from '../../../graphql/queries'
 
 import BurgerIcon from '../BurgerIcon'
 
@@ -28,12 +25,11 @@ const item = {
   },
 }
 
-const NavBar: React.FC = () => {
-  const { loading, error, data } = useQuery(GET_NAVBAR_ITEMS)
+type Props = {
+  navbar: any
+}
 
-  if (error) return <div>Error</div>
-  if (loading) return <div>Loading</div>
-
+const NavBar: React.FC<Props> = ({ navbar }) => {
   return (
     <Wrapper data-testid="navbar">
       <Container>
@@ -42,13 +38,14 @@ const NavBar: React.FC = () => {
         </div>
         <Items>
           <motion.ul variants={container} initial="hidden" animate={'visible'}>
-            {data.navbar.map((link) => (
-              <motion.li key={link.id} variants={item}>
-                <Link href={link.link}>
-                  <a>{link.label}</a>
-                </Link>
-              </motion.li>
-            ))}
+            {navbar &&
+              navbar.map((link) => (
+                <motion.li key={link.id} variants={item}>
+                  <Link href={link.link}>
+                    <a>{link.label}</a>
+                  </Link>
+                </motion.li>
+              ))}
           </motion.ul>
         </Items>
         <BurgerIcon />

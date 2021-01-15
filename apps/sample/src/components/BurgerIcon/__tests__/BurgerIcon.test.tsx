@@ -8,8 +8,8 @@ describe('<BurgerIcon /> spec', () => {
   it('Should run without errors', () => {
     const { queryAllByTestId } = render(<BurgerIcon />)
 
-    const navbar = queryAllByTestId(/burgericon/i)
-    expect(navbar).toHaveLength(1)
+    const burgericon = queryAllByTestId(/burgericon/i)
+    expect(burgericon).toHaveLength(1)
   })
 
   it('Should match snapshot', () => {
