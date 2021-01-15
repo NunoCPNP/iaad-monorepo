@@ -5,8 +5,9 @@ import { useAppState } from '../context/appContext'
 import { dark } from '../styles/themes/dark'
 import { light } from '../styles/themes/light'
 
-import SEO from '../components/seo/SEO'
-import HeaderSlot from '../components/HeaderSlot/HeaderSlot'
+import SEO from '../components/seo'
+import Header from '../components/Header'
+import HeaderSlot from '../components/HeaderSlot'
 
 import { initializeApollo } from '../../lib/apolloClient'
 import { GET_NAVBAR_ITEMS } from '../../graphql/queries'
@@ -19,6 +20,7 @@ const App = () => {
       <SEO title="" description="" />
       <ThemeProvider theme={darkMode ? dark : light}>
         <HeaderSlot />
+        <Header />
         <Main>
           <section id="Home">
             <h1>Hello World !</h1>

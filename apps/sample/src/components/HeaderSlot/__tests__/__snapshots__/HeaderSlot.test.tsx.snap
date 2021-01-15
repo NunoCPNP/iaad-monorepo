@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderSlot /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #272727;
+  color: #FCFAFA;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.emotion-1 {
+  font-weight: 700;
+}
+
+.emotion-2 {
+  padding: 0 0.7rem 0 0.7rem;
+}
+
+<div
+    class="emotion-0"
+    data-testid="headerslot"
+  >
+    <span
+      class="emotion-1"
+    >
+      Stay Safe, Stay Home
+    </span>
+    <div
+      class="emotion-2"
+    >
+      |
+    </div>
+    <span>
+      Covid 19
+    </span>
+  </div>
+</DocumentFragment>
+`;

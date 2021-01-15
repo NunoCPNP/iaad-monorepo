@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  width: 100%;
+  background-color: #C1292E;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.3s ease background-color;
+  transition: 0.3s ease background-color;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  max-width: 140rem;
+  height: 5rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .emotion-1 {
+    padding: 0 1rem;
+  }
+}
+
+.emotion-2 {
+  width: 4rem;
+}
+
+.emotion-3 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 li a {
+  font-family: 'Roboto',sans-serif;
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #FCFAFA;
+  -webkit-transition: 0.2s ease-out color;
+  transition: 0.2s ease-out color;
+}
+
+.emotion-3 li a:hover {
+  color: #272727;
+}
+
+@media only screen and (max-width: 768px) {
+  .emotion-3 {
+    display: none;
+  }
+}
+
+.emotion-4 {
+  font-size: 50%;
+  width: 6em;
+  height: 4.5em;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-4 span {
+  display: block;
+  position: absolute;
+  height: 0.6em;
+  width: 50%;
+  background: #FCFAFA;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.emotion-4 span:nth-of-type(even) {
+  left: 50%;
+  border-radius: 0 0.9em 0.9em 0;
+}
+
+.emotion-4 span:nth-of-type(odd) {
+  left: 0em;
+  border-radius: 0.9em 0 0 0.9em;
+}
+
+.emotion-4 span:nth-of-type(1),
+.emotion-4 span:nth-of-type(2) {
+  top: 0em;
+}
+
+.emotion-4 span:nth-of-type(3),
+.emotion-4 span:nth-of-type(4) {
+  top: 1.8em;
+}
+
+.emotion-4 span:nth-of-type(5),
+.emotion-4 span:nth-of-type(6) {
+  top: 3.6em;
+}
+
+.emotion-4.open span:nth-of-type(1),
+.emotion-4.open span:nth-of-type(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-4.open span:nth-of-type(2),
+.emotion-4.open span:nth-of-type(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-4.open span:nth-of-type(1) {
+  left: 0.5em;
+  top: 0.7em;
+}
+
+.emotion-4.open span:nth-of-type(2) {
+  left: calc(50% - 0.5em);
+  top: 0.7em;
+}
+
+.emotion-4.open span:nth-of-type(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.emotion-4.open span:nth-of-type(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.emotion-4.open span:nth-of-type(5) {
+  left: 0.5em;
+  top: 2.9em;
+}
+
+.emotion-4.open span:nth-of-type(6) {
+  left: calc(50% - 0.5em);
+  top: 2.9em;
+}
+
+@media only screen and (min-width: 769px) {
+  .emotion-4 {
+    display: none;
+  }
+}
+
+<nav
+    class="emotion-0"
+    data-testid="navbar"
+  >
+    <div
+      class="emotion-1"
+    >
+      <div
+        class="navbar-logo"
+      >
+        <div
+          class="emotion-2"
+        />
+      </div>
+      <div
+        class="emotion-3"
+      >
+        <ul
+          style="opacity: 1; transform: scale(0) translateZ(0);"
+        >
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class=" emotion-4"
+        data-testid="burgericon"
+      >
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
