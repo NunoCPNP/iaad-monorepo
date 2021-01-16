@@ -14,7 +14,7 @@ const server = new ApolloServer({ typeDefs, resolvers })
 server.applyMiddleware({ app })
 
 app.get('/', (req, res) => {
-  res.status(200).send(data) 
+  res.status(200).send(data)
 })
 
 app.listen(9000, () => console.log('GraphQL Server running on port 9000'))

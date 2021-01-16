@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "preinstall": "node common/checkYarn.js",
-    "dev": "garment run dev"
+    "start": "garment start"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

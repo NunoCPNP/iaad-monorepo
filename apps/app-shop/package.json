@@ -1,5 +1,5 @@
 {
-  "name": "@iaad/sample-app",
+  "name": "@iaad/app-shop",
   "version": "0.1.0",
   "description": "IAAD Sample App",
   "main": "src/pages/index.js",

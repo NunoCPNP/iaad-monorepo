@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BurgerIcon /> spec Should match snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  font-size: 50%;
+  width: 6em;
+  height: 4.5em;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-0 span {
+  display: block;
+  position: absolute;
+  height: 0.6em;
+  width: 50%;
+  background: #FCFAFA;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.emotion-0 span:nth-of-type(even) {
+  left: 50%;
+  border-radius: 0 0.9em 0.9em 0;
+}
+
+.emotion-0 span:nth-of-type(odd) {
+  left: 0em;
+  border-radius: 0.9em 0 0 0.9em;
+}
+
+.emotion-0 span:nth-of-type(1),
+.emotion-0 span:nth-of-type(2) {
+  top: 0em;
+}
+
+.emotion-0 span:nth-of-type(3),
+.emotion-0 span:nth-of-type(4) {
+  top: 1.8em;
+}
+
+.emotion-0 span:nth-of-type(5),
+.emotion-0 span:nth-of-type(6) {
+  top: 3.6em;
+}
+
+.emotion-0.open span:nth-of-type(1),
+.emotion-0.open span:nth-of-type(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.emotion-0.open span:nth-of-type(2),
+.emotion-0.open span:nth-of-type(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.emotion-0.open span:nth-of-type(1) {
+  left: 0.5em;
+  top: 0.7em;
+}
+
+.emotion-0.open span:nth-of-type(2) {
+  left: calc(50% - 0.5em);
+  top: 0.7em;
+}
+
+.emotion-0.open span:nth-of-type(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.emotion-0.open span:nth-of-type(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.emotion-0.open span:nth-of-type(5) {
+  left: 0.5em;
+  top: 2.9em;
+}
+
+.emotion-0.open span:nth-of-type(6) {
+  left: calc(50% - 0.5em);
+  top: 2.9em;
+}
+
+@media only screen and (min-width: 769px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+<div
+    class=" emotion-0"
+    data-testid="burgericon"
+  >
+    <span />
+    <span />
+    <span />
+    <span />
+    <span />
+    <span />
+  </div>
+</DocumentFragment>
+`;

@@ -2,27 +2,26 @@
   "$schema": "./node_modules/@garment/workspace/schemas/config.schema.json",
   "presets": {},
   "projects": {
-    "app": {
-      "path": "apps/sample",
+    "app-main": {
+      "path": "apps/app-main",
       "tasks": {
-        "dev": {
+        "start": {
           "runner": "next",
           "options": {
-            "appPath": "{{projectDir}}"
+            "appPath": "{{projectDir}}",
+            "command": "dev"
           }
         }
       }
     },
-    "api": {
-      "path": "apis/sample",
+    "app-shop": {
+      "path": "apps/app-shop",
       "tasks": {
-        "dev": {
-          "runner": "bin",
+        "start": {
+          "runner": "next",
           "options": {
-            "bin": "yarn",
-            "args": "run dev",
-            "stream": true,
-            "longRunning": true
+            "appPath": "{{projectDir}}",
+            "command": "dev"
           }
         }
       }
