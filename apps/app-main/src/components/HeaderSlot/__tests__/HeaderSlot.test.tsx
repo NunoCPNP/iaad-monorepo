@@ -1,4 +1,4 @@
-import { render, cleanup } from '../../../utils/tests'
+import { render, screen, cleanup } from '../../../utils/tests'
 
 import HeaderSlot from '../HeaderSlot'
 
@@ -10,6 +10,13 @@ describe('<HeaderSlot /> spec', () => {
 
     const headerslot = queryAllByTestId(/headerslot/i)
     expect(headerslot).toHaveLength(1)
+  })
+
+  it('Should recieve translation strings', () => {
+    const { getByText } = render(<HeaderSlot />)
+
+    expect(screen.getByText('common:headerslot.1')).toBeTruthy()
+    expect(screen.getByText('common:headerslot.2')).toBeTruthy()
   })
 
   it('Should match snapshot', () => {

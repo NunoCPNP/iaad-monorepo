@@ -37,7 +37,7 @@ exports[`<HeaderSlot /> spec Should match snapshot 1`] = `
     <span
       class="emotion-1"
     >
-      Stay Safe, Stay Home
+      common:headerslot.1
     </span>
     <div
       class="emotion-2"
@@ -45,7 +45,7 @@ exports[`<HeaderSlot /> spec Should match snapshot 1`] = `
       |
     </div>
     <span>
-      Covid 19
+      common:headerslot.2
     </span>
   </div>
 </DocumentFragment>
