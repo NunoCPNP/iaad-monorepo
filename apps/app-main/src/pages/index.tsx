@@ -10,7 +10,6 @@ import SEO from '../components/seo'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeaderSlot from '../components/HeaderSlot'
-import LanguageSelector from '../components/LanguageSelector'
 
 import { data } from '../../data'
 
@@ -33,7 +32,6 @@ const App: React.FC<Props> = ({ navbar }) => {
             <h1>{t('common:greeting')}</h1>
           </section>
         </Main>
-        <LanguageSelector />
         <Footer />
       </ThemeProvider>
     </>

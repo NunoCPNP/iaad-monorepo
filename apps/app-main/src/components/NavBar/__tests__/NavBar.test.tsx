@@ -12,6 +12,13 @@ describe('<NavBar /> spec', () => {
     expect(navbar).toHaveLength(1)
   })
 
+  it('Should render BurgerIcon Component', () => {
+    const { queryAllByTestId } = render(<NavBar />)
+
+    const navbar = queryAllByTestId(/burgericon/i)
+    expect(navbar).toHaveLength(1)
+  })
+
   it('Should match snapshot', () => {
     const { asFragment } = render(<NavBar />)
 

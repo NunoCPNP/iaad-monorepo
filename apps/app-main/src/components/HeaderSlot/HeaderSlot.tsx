@@ -1,15 +1,25 @@
 import useTranslation from 'next-translate/useTranslation'
 
-import { Container, Bold, Separator } from './HeaderSlot.styles'
+import LanguageSelector from '../LanguageSelector'
+
+import { Container, Wrapper, Slot, Bold, Separator } from './HeaderSlot.styles'
 
 const HeaderSlot: React.FC = () => {
   const { t } = useTranslation()
 
   return (
     <Container data-testid="headerslot">
-      <Bold>{t('common:headerslot.1')}</Bold>
-      <Separator>|</Separator>
-      <span>{t('common:headerslot.2')}</span>
+      <div>
+        <div></div>
+        <Slot>
+          <Bold>{t('common:headerslot.1')}</Bold>
+          <Separator>|</Separator>
+          <span>{t('common:headerslot.2')}</span>
+        </Slot>
+        <Wrapper>
+          <LanguageSelector />
+        </Wrapper>
+      </div>
     </Container>
   )
 }

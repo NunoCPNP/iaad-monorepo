@@ -19,6 +19,13 @@ describe('<HeaderSlot /> spec', () => {
     expect(screen.getByText('common:headerslot.2')).toBeTruthy()
   })
 
+  it('Should render LanguageSelector component', () => {
+    const { queryAllByTestId } = render(<HeaderSlot />)
+
+    const headerslot = queryAllByTestId(/languageselector/i)
+    expect(headerslot).toHaveLength(1)
+  })
+
   it('Should match snapshot', () => {
     const { asFragment } = render(<HeaderSlot />)
 
