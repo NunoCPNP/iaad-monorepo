@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import useTranslation from 'next-translate/useTranslation'
 import { ThemeProvider } from '@emotion/react'
 import { useAppState } from '../context/appContext'
 
@@ -19,7 +18,6 @@ type Props = {
 
 const App: React.FC<Props> = ({ navbar }) => {
   const { darkMode } = useAppState()
-  const { t } = useTranslation()
 
   return (
     <>
@@ -28,9 +26,7 @@ const App: React.FC<Props> = ({ navbar }) => {
         <HeaderSlot />
         <Header navbar={navbar} />
         <Main>
-          <section id="Home">
-            <h1>{t('common:greeting')}</h1>
-          </section>
+          <section id="home"></section>
         </Main>
         <Footer />
       </ThemeProvider>

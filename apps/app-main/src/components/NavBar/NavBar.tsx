@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 import { motion } from 'framer-motion'
 
 import BurgerIcon from '../BurgerIcon'
@@ -30,11 +31,13 @@ type Props = {
 }
 
 const NavBar: React.FC<Props> = ({ navbar }) => {
+  const { t } = useTranslation()
+
   return (
     <Wrapper data-testid="navbar">
       <Container>
-        <div className="navbar-logo">
-          <Logo>{/* <img src="/logo192.png" alt="Website logo" /> */}</Logo>
+        <div>
+          <Logo></Logo>
         </div>
         <Items>
           <motion.ul variants={container} initial="hidden" animate={'visible'}>
@@ -42,7 +45,7 @@ const NavBar: React.FC<Props> = ({ navbar }) => {
               navbar.map((link) => (
                 <motion.li key={link.id} variants={item}>
                   <Link href={link.link}>
-                    <a>{link.label}</a>
+                    <a>{t(`common:navbar.${link.label}`)}</a>
                   </Link>
                 </motion.li>
               ))}

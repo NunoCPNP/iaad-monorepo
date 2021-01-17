@@ -179,9 +179,7 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
     <div
       class="emotion-1"
     >
-      <div
-        class="navbar-logo"
-      >
+      <div>
         <div
           class="emotion-2"
         />

@@ -190,9 +190,7 @@ exports[`<Header /> spec Should match snapshot 1`] = `
       <div
         class="emotion-2"
       >
-        <div
-          class="navbar-logo"
-        >
+        <div>
           <div
             class="emotion-3"
           />

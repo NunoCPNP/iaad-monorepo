@@ -6,8 +6,32 @@ export const data = () => {
     navbar: [
       {
         id: uuidv4(),
-        label: 'Home',
-        link: '/',
+        label: 'home',
+        link: '#',
+        type: 'standard',
+      },
+      {
+        id: uuidv4(),
+        label: 'who',
+        link: '#who',
+        type: 'standard',
+      },
+      {
+        id: uuidv4(),
+        label: 'services',
+        link: '#services',
+        type: 'standard',
+      },
+      {
+        id: uuidv4(),
+        label: 'contacts',
+        link: '#contacts',
+        type: 'standard',
+      },
+      {
+        id: uuidv4(),
+        label: 'ctc',
+        link: '#ctc',
         type: 'standard',
       },
     ],

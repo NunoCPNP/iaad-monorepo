@@ -1,3 +1,19 @@
 {
-  "greeting": "Olá mundo"
+  "greeting": "Olá mundo",
+  "headerslot": {
+    "1": "Proteja-se, Fique em Casa",
+    "2": "Covid 19"
+  },
+  "navbar": {
+    "home": "Home",
+    "who": "Quem Somos",
+    "services": "Serviços",
+    "contacts": "Contactos",
+    "ctc": "Curso para Treinadores"
+  },
+  "cta": {
+    "1": "",
+    "2": "",
+    "button": ""
+  }
 }
