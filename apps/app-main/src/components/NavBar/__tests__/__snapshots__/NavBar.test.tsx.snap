@@ -23,7 +23,8 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   max-width: 140rem;
-  height: 5rem;
+  height: 6rem;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -182,14 +183,70 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
       <div>
         <div
           class="emotion-2"
-        />
+        >
+          <div
+            style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 200px; height: 50px;"
+          >
+            <img
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </div>
+        </div>
       </div>
       <div
         class="emotion-3"
       >
         <ul
           style="opacity: 1; transform: scale(0) translateZ(0);"
-        />
+        >
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/"
+            >
+              common:navbar.home
+            </a>
+          </li>
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/#who"
+            >
+              common:navbar.who
+            </a>
+          </li>
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/#services"
+            >
+              common:navbar.services
+            </a>
+          </li>
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/#contacts"
+            >
+              common:navbar.contacts
+            </a>
+          </li>
+          <li
+            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          >
+            <a
+              href="/#ctc"
+            >
+              common:navbar.ctc
+            </a>
+          </li>
+        </ul>
       </div>
       <div
         class=" emotion-4"

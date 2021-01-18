@@ -9,39 +9,25 @@ import SEO from '../components/seo'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HeaderSlot from '../components/HeaderSlot'
+import LanguageSelector from '../components/LanguageSelector'
 
-import { data } from '../../data'
-
-type Props = {
-  navbar: any
-}
-
-const App: React.FC<Props> = ({ navbar }) => {
-  const { darkMode } = useAppState()
+const App: React.FC = () => {
+  const { darkMode, languageSwitch } = useAppState()
 
   return (
     <>
       <SEO title="" description="" />
       <ThemeProvider theme={darkMode ? dark : light}>
         <HeaderSlot />
-        <Header navbar={navbar} />
+        <Header />
         <Main>
           <section id="home"></section>
         </Main>
         <Footer />
+        {languageSwitch && <LanguageSelector />}
       </ThemeProvider>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const dataResponse = data()
-
-  return {
-    props: {
-      navbar: dataResponse.navbar,
-    },
-  }
 }
 
 export default App

@@ -3,19 +3,6 @@ import styled from '@emotion/styled'
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.secondary};
-
-  div {
-    display: flex;
-    justify-content: space-between;
-    max-width: 140rem;
-
-    @media only screen and (max-width: 1400px) {
-      padding: 0 1rem;
-    }
-  }
-`
-
-export const Slot = styled.div`
   text-transform: uppercase;
   font-size: 1.2rem;
   display: flex;

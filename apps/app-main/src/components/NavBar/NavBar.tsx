@@ -1,54 +1,61 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import { motion } from 'framer-motion'
 
 import BurgerIcon from '../BurgerIcon'
 
 import { Logo, Wrapper, Container, Items } from './NavBar.styles'
+import { animContainer, animItem } from './NavBar.animations'
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    },
+const navbaritems = [
+  {
+    label: 'home',
+    link: '/',
+    type: 'standard',
   },
-}
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
+  {
+    label: 'who',
+    link: '/#who',
+    type: 'standard',
   },
-}
+  {
+    label: 'services',
+    link: '/#services',
+    type: 'standard',
+  },
+  {
+    label: 'contacts',
+    link: '/#contacts',
+    type: 'standard',
+  },
+  {
+    label: 'ctc',
+    link: '/#ctc',
+    type: 'standard',
+  },
+]
 
-type Props = {
-  navbar: any
-}
-
-const NavBar: React.FC<Props> = ({ navbar }) => {
+const NavBar: React.FC = () => {
   const { t } = useTranslation()
 
   return (
     <Wrapper data-testid="navbar">
       <Container>
         <div>
-          <Logo></Logo>
+          <Logo>
+            <Image src="/iaad_logo.png" width={200} height={50} layout="fixed" />
+          </Logo>
         </div>
         <Items>
-          <motion.ul variants={container} initial="hidden" animate={'visible'}>
-            {navbar &&
-              navbar.map((link) => (
-                <motion.li key={link.id} variants={item}>
-                  <Link href={link.link}>
-                    <a>{t(`common:navbar.${link.label}`)}</a>
-                  </Link>
-                </motion.li>
-              ))}
+          <motion.ul variants={animContainer} initial="hidden" animate={'visible'}>
+            {navbaritems.map((link, index) => (
+              <motion.li key={index} variants={animItem}>
+                <Link href={link.link}>
+                  <a>{t(`common:navbar.${link.label}`)}</a>
+                </Link>
+              </motion.li>
+            ))}
           </motion.ul>
         </Items>
         <BurgerIcon />

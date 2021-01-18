@@ -12,7 +12,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: 140rem;
-  height: 5rem;
+  height: 6rem;
+  margin: 0 auto;
 
   @media only screen and (max-width: 1400px) {
     padding: 0 1rem;
