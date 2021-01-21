@@ -1,5 +1,4 @@
 import { Global, css } from '@emotion/react'
-import { colors } from './variables/colors'
 
 const GlobalStyles = () => {
   return (
@@ -33,49 +32,52 @@ const GlobalStyles = () => {
           src: url('/Roboto-Bold.ttf') format('truetype');
         }
 
-        html,
-        body,
-        p,
-        ol,
-        ul,
-        li,
-        dl,
-        dt,
-        dd,
-        blockquote,
-        figure,
-        fieldset,
-        legend,
-        textarea,
-        pre,
-        iframe,
-        hr,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-          margin: 0;
-          padding: 0;
-        }
+        :root {
+          /* Colors */
+          --richBlack: '#00171F';
+          --eerieBlack: '#272727';
+          --battleshipgrey: '#8c8c8c';
+          --rust: '#A44200';
+          --redcrayola: '##f03252';
+          --fireenginered: '#C1292E';
+          --sunglow: '#F9CB40';
+          --brightyellocrayola: '#FCAB10';
+          --snow: '#FFFCFF';
+          --cultured: '#FCFAFA';
 
-        ul {
-          list-style: none;
-        }
+          /* Typography */
+          --headingFont: 'Cabin', sans-serif;
+          --bodyFont: 'Cabin', sans-serif;
 
-        button,
-        input,
-        select,
-        textarea {
-          margin: 0;
+          --baseFontSize: 1.6rem;
+          --smallFontSize: 1.28rem;
+          --smallestFontSize: 0.819rem;
+
+          --heading-1: 3.125rem;
+          --heading-2: 2.5rem;
+          --heading-3: 2rem;
+          --heading-4: var(--baseFontSize);
+          --heading-5: var(--smallFontSize);
+          --heading-6: 1.024rem;
+          --heading-7: var(--smallestFontSize);
+
+          /* z-index */
+          --headerLevel: 10;
+          --highestLevel: 100;
         }
 
         html {
-          box-sizing: border-box;
           font-size: 62.5%;
-          font-family: 'Cabin', sans-serif;
+          box-sizing: border-box;
           scroll-behavior: smooth;
+        }
+
+        body {
+          font-family: 'Cabin', sans-serif;
+          font-weight: 400;
+          line-height: 1.75;
+          padding: 0;
+          margin: 0;
         }
 
         *,
@@ -84,29 +86,48 @@ const GlobalStyles = () => {
           box-sizing: inherit;
         }
 
-        img,
-        video {
-          height: auto;
-          max-width: 100%;
+        p {
+          margin-bottom: 1rem;
         }
 
-        iframe {
-          border: 0;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          margin: 3rem 0 1.38rem;
+          font-family: 'Cabin', sans-serif;
+          font-weight: 400;
+          line-height: 1.3;
         }
 
-        table {
-          border-collapse: collapse;
-          border-spacing: 0;
+        h1 {
+          margin-top: 0;
+          font-size: var(--heading-1);
         }
 
-        td,
-        th {
-          padding: 0;
+        h2 {
+          font-size: var(--heading-2);
         }
 
-        td:not([align]),
-        th:not([align]) {
-          text-align: left;
+        h3 {
+          font-size: var(--heading-3);
+        }
+
+        h4 {
+          font-size: var(--heading-4);
+        }
+
+        h5 {
+          font-size: var(--heading-5);
+        }
+
+        h6 {
+          font-size: var(--heading-6);
+        }
+
+        ul {
+          list-style: none;
         }
 
         #nprogress {
@@ -120,7 +141,7 @@ const GlobalStyles = () => {
           left: 0;
           width: 100%;
           height: 5px;
-          background: ${colors.fireEngineRed};
+          background: var(--fireEngineRed);
         }
 
         #nprogress::after {
