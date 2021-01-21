@@ -34,16 +34,16 @@ const GlobalStyles = () => {
 
         :root {
           /* Colors */
-          --richBlack: '#00171F';
-          --eerieBlack: '#272727';
-          --battleshipgrey: '#8c8c8c';
-          --rust: '#A44200';
-          --redcrayola: '##f03252';
-          --fireenginered: '#C1292E';
-          --sunglow: '#F9CB40';
-          --brightyellocrayola: '#FCAB10';
-          --snow: '#FFFCFF';
-          --cultured: '#FCFAFA';
+          --richBlack: #00171f;
+          --eerieBlack: #272727;
+          --battleshipgrey: #8c8c8c;
+          --rust: #a44200;
+          --redcrayola: #f03252;
+          --fireenginered: #c1292e;
+          --sunglow: #f9cb40;
+          --brightyellocrayola: #fcab10;
+          --snow: #fffcff;
+          --cultured: #fcfafa;
 
           /* Typography */
           --headingFont: 'Cabin', sans-serif;
@@ -152,6 +152,20 @@ const GlobalStyles = () => {
           width: 100%;
           height: 0.5rem;
           background: transparent;
+        }
+
+        .dark-mode {
+          --mainColor: var(--cultured);
+          --mainBackground: var(----eerieBlack);
+          --headerslotBackground: var(--eerieBlack);
+          --headerslotColor: var(--cultured);
+          --navbarBackground: var(--fireenginered);
+          --navbarColor: var(--cultured);
+          --navbarColorHover: var(----eerieBlack);
+          --burgericon: var(--cultured);
+        }
+
+        .light-mode {
         }
       `}
     />

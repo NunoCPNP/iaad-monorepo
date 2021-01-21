@@ -13,13 +13,15 @@ const App: React.FC = () => {
   return (
     <>
       <SEO title="" description="" />
-      <HeaderSlot />
-      <Header />
-      <Main>
-        <section id="home"></section>
-      </Main>
-      <Footer />
-      {languageSwitch && <LanguageSelector />}
+      <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+        <HeaderSlot />
+        <Header />
+        <Main>
+          <section id="home">Hey You !</section>
+        </Main>
+        <Footer />
+        {languageSwitch && <LanguageSelector />}
+      </div>
     </>
   )
 }
@@ -27,8 +29,8 @@ const App: React.FC = () => {
 export default App
 
 const Main = styled.main`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.secondary};
+  background-color: var(--mainBackground);
+  color: var(--mainColor);
   transition: 0.3s ease background-color;
   overflow: hidden;
 `

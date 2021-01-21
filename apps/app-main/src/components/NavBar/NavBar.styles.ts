@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const Wrapper = styled.nav`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.accent};
+  background-color: var(--navbarBackground);
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease background-color;
 `
@@ -32,11 +32,11 @@ export const Items = styled.div`
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: var(--navbarColor);
     transition: 0.2s ease-out color;
 
     :hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: var(--navbarColorHover);
     }
   }
 

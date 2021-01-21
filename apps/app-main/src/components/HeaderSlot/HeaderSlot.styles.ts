@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.secondary};
+  background-color: var(--headerslotBackground);
+  color: var(--headerslotColor);
   text-transform: uppercase;
   font-size: 1.2rem;
   display: flex;

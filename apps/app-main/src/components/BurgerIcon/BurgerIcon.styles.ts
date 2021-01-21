@@ -14,7 +14,7 @@ export const Icon = styled.div`
     position: absolute;
     height: 0.6em;
     width: 50%;
-    background: ${({ theme }) => theme.colors.secondary};
+    background: var(--burgericon);
     opacity: 1;
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
