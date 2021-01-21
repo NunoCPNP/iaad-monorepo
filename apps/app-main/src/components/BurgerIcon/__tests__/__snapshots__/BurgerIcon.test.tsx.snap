@@ -21,7 +21,7 @@ exports[`<BurgerIcon /> spec Should match snapshot 1`] = `
   position: absolute;
   height: 0.6em;
   width: 50%;
-  background: #FCFAFA;
+  background: var(--burgericon);
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -108,16 +108,18 @@ exports[`<BurgerIcon /> spec Should match snapshot 1`] = `
   }
 }
 
-<div
-    class=" emotion-0"
-    data-testid="burgericon"
-  >
-    <span />
-    <span />
-    <span />
-    <span />
-    <span />
-    <span />
+<div>
+    <div
+      class=" emotion-0"
+      data-testid="burgericon"
+    >
+      <span />
+      <span />
+      <span />
+      <span />
+      <span />
+      <span />
+    </div>
   </div>
 </DocumentFragment>
 `;

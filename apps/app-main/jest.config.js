@@ -1,6 +1,12 @@
 module.exports = {
   verbose: true,
-  collectCoverageFrom: ['**/*.{js,jsx}', '!**/node_modules/**', '!**/tests/**', '!**/coverage/**', '!jest.config.js'],
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
+    '!**/tests/**',
+    '!**/coverage/**',
+    '!jest.config.js',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,

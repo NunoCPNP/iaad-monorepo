@@ -13,11 +13,13 @@ exports[`<LanguageSelector /> spec Should match snapshot 1`] = `
   padding-right: 0.5rem;
 }
 
-<div
-    class="emotion-0"
-    data-testid="languageselector"
-  >
-    <ul />
+<div>
+    <div
+      class="emotion-0"
+      data-testid="languageselector"
+    >
+      <ul />
+    </div>
   </div>
 </DocumentFragment>
 `;

@@ -1,11 +1,8 @@
 import '@testing-library/jest-dom'
 import { render } from '@testing-library/react'
-import { ThemeProvider } from '@emotion/react'
-
-import { dark } from '../styles/themes/dark'
 
 const AllTheProviders = ({ children }) => {
-  return <ThemeProvider theme={dark}>{children}</ThemeProvider>
+  return <div>{children}</div>
 }
 
 const customRender = (ui, options) => render(ui, { wrapper: AllTheProviders, ...options })

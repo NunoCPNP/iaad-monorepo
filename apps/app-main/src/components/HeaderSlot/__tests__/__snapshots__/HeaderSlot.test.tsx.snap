@@ -3,8 +3,8 @@
 exports[`<HeaderSlot /> spec Should match snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
-  background-color: #272727;
-  color: #FCFAFA;
+  background-color: var(--headerslotBackground);
+  color: var(--headerslotColor);
   text-transform: uppercase;
   font-size: 1.2rem;
   display: -webkit-box;
@@ -30,23 +30,25 @@ exports[`<HeaderSlot /> spec Should match snapshot 1`] = `
   padding: 0 0.7rem 0 0.7rem;
 }
 
-<div
-    class="emotion-0"
-    data-testid="headerslot"
-  >
-    <span
-      class="emotion-1"
-    >
-      common:headerslot.1
-    </span>
+<div>
     <div
-      class="emotion-2"
+      class="emotion-0"
+      data-testid="headerslot"
     >
-      |
+      <span
+        class="emotion-1"
+      >
+        common:headerslot.1
+      </span>
+      <div
+        class="emotion-2"
+      >
+        |
+      </div>
+      <span>
+        common:headerslot.2
+      </span>
     </div>
-    <span>
-      common:headerslot.2
-    </span>
   </div>
 </DocumentFragment>
 `;

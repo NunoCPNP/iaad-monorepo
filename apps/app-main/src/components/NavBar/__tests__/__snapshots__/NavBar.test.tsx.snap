@@ -4,7 +4,7 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
 <DocumentFragment>
   .emotion-0 {
   width: 100%;
-  background-color: #C1292E;
+  background-color: var(--navbarBackground);
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.3s ease background-color;
   transition: 0.3s ease background-color;
@@ -52,13 +52,13 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
   font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #FCFAFA;
+  color: var(--navbarColor);
   -webkit-transition: 0.2s ease-out color;
   transition: 0.2s ease-out color;
 }
 
 .emotion-3 li a:hover {
-  color: #272727;
+  color: var(--navbarColorHover);
 }
 
 @media only screen and (max-width: 768px) {
@@ -86,7 +86,7 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
   position: absolute;
   height: 0.6em;
   width: 50%;
-  background: #FCFAFA;
+  background: var(--burgericon);
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -173,93 +173,95 @@ exports[`<NavBar /> spec Should match snapshot 1`] = `
   }
 }
 
-<nav
-    class="emotion-0"
-    data-testid="navbar"
-  >
-    <div
-      class="emotion-1"
+<div>
+    <nav
+      class="emotion-0"
+      data-testid="navbar"
     >
-      <div>
-        <div
-          class="emotion-2"
-        >
+      <div
+        class="emotion-1"
+      >
+        <div>
           <div
-            style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 200px; height: 50px;"
+            class="emotion-2"
           >
-            <img
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
+            <div
+              style="overflow: hidden; box-sizing: border-box; display: inline-block; position: relative; width: 200px; height: 50px;"
+            >
+              <img
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="emotion-3"
-      >
-        <ul
-          style="opacity: 1; transform: scale(0) translateZ(0);"
+        <div
+          class="emotion-3"
         >
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
+          <ul
+            style="opacity: 1; transform: scale(0) translateZ(0);"
           >
-            <a
-              href="/"
+            <li
+              style="opacity: 0; transform: translateY(20px) translateZ(0);"
             >
-              common:navbar.home
-            </a>
-          </li>
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
-          >
-            <a
-              href="/#who"
+              <a
+                href="/"
+              >
+                common:navbar.home
+              </a>
+            </li>
+            <li
+              style="opacity: 0; transform: translateY(20px) translateZ(0);"
             >
-              common:navbar.who
-            </a>
-          </li>
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
-          >
-            <a
-              href="/#services"
+              <a
+                href="/#who"
+              >
+                common:navbar.who
+              </a>
+            </li>
+            <li
+              style="opacity: 0; transform: translateY(20px) translateZ(0);"
             >
-              common:navbar.services
-            </a>
-          </li>
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
-          >
-            <a
-              href="/#contacts"
+              <a
+                href="/#services"
+              >
+                common:navbar.services
+              </a>
+            </li>
+            <li
+              style="opacity: 0; transform: translateY(20px) translateZ(0);"
             >
-              common:navbar.contacts
-            </a>
-          </li>
-          <li
-            style="opacity: 0; transform: translateY(20px) translateZ(0);"
-          >
-            <a
-              href="/#ctc"
+              <a
+                href="/#contacts"
+              >
+                common:navbar.contacts
+              </a>
+            </li>
+            <li
+              style="opacity: 0; transform: translateY(20px) translateZ(0);"
             >
-              common:navbar.ctc
-            </a>
-          </li>
-        </ul>
+              <a
+                href="/#ctc"
+              >
+                common:navbar.ctc
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class=" emotion-4"
+          data-testid="burgericon"
+        >
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-      <div
-        class=" emotion-4"
-        data-testid="burgericon"
-      >
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </DocumentFragment>
 `;
