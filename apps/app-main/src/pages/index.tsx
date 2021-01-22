@@ -4,15 +4,16 @@ import { useAppState } from '../context/appContext'
 import SEO from '../components/seo'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import GDPR from '../components/gdpr'
 import HeaderSlot from '../components/HeaderSlot'
 import LanguageSelector from '../components/LanguageSelector'
 
 const App: React.FC = () => {
-  const { darkMode, languageSwitch } = useAppState()
+  const { darkMode, languageSwitch, gdprModal } = useAppState()
 
   return (
     <>
-      <SEO title="" description="" />
+      <SEO title="IAAD" description="" />
       <div className={darkMode ? 'dark-mode' : 'light-mode'}>
         <HeaderSlot />
         <Header />
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         </Main>
         <Footer />
         {languageSwitch && <LanguageSelector />}
+        {gdprModal && <GDPR />}
       </div>
     </>
   )

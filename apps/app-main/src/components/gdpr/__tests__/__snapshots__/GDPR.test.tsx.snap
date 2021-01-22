@@ -2,11 +2,32 @@
 
 exports[`<GDPR /> spec Should match snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  .emotion-0 {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: green;
+  z-index: 100;
+}
+
+.emotion-0 .text {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+<div>
     <div
       class="emotion-0"
       data-testid="gdpr"
-    />
+      style="opacity: 0; transform: translateY(30px) translateZ(0);"
+    >
+      <div
+        class="text"
+      >
+        Testing GDPR
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
